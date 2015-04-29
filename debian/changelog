@@ -1,0 +1,35 @@
+ros-jade-pr2-common (1.11.9-0vivid) vivid; urgency=high
+
+
+
+ -- Devon Ash <dash@clearpathrobotics.com>  Tue, 10 Feb 2015 08:00:00 -0000
+
+ros-jade-pr2-common (1.11.8-0vivid) vivid; urgency=high
+
+
+
+ -- Devon Ash <dash@clearpathrobotics.com>  Tue, 13 Jan 2015 08:00:00 -0000
+
+ros-jade-pr2-common (1.11.7-0vivid) vivid; urgency=high
+
+  * Fixed changelogs manually
+  * changelog bugs
+  * Merge conflicts
+  * Updated package.xml
+  * Changelogs
+  * Changelogs
+  * Changelogs
+  * Indigo devel commit
+  * Changelogs
+  * Contributors: TheDash, dash
+
+ -- Devon Ash <dash@clearpathrobotics.com>  Mon, 12 Jan 2015 08:00:00 -0000
+
+ros-jade-pr2-common (1.11.5-0vivid) vivid; urgency=high
+
+  * Added indigo-devel
+  * Contributors: dash
+
+ -- Devon Ash <dash@clearpathrobotics.com>  Tue, 16 Dec 2014 08:00:00 -0000
+
+
