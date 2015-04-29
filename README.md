@@ -1,3 +1,29 @@
+## pr2_common (jade) - 1.11.9-0
+
+The packages in the `pr2_common` repository were released into the `jade` distro by running `/usr/local/bin/bloom-release -t jade -r jade pr2_common` on `Wed, 29 Apr 2015 21:00:41 -0000`
+
+These packages were released:
+- `pr2_common`
+- `pr2_dashboard_aggregator`
+- `pr2_description`
+- `pr2_machine`
+- `pr2_msgs`
+
+Version of package(s) in repository `pr2_common`:
+- upstream repository: https://github.com/pr2/pr2_common.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.11.9-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.8`
+- rosdep version: `0.11.2`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.36`
+
+
 ## pr2_common (indigo) - 1.11.9-0
 
 The packages in the `pr2_common` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo pr2_common` on `Tue, 10 Feb 2015 16:25:57 -0000`
