@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <root xmlns:xacro="http://ros.org/wiki/xacro">
-  
+
 <xacro:macro name="kinect_ir_gazebo_v0" params="link_name frame_name camera_name">
   <gazebo reference="${link_name}">
     <sensor type="depth" name="${name}_ir_sensor">
@@ -23,8 +23,8 @@
         <alwaysOn>true</alwaysOn>
         <updateRate>1.0</updateRate>
         <cameraName>${camera_name}_ir</cameraName>
-        <imageTopicName>/${camera_name}/depth/image_raw</imageTopicName>
-        <cameraInfoTopicName>/${camera_name}/depth/camera_info</cameraInfoTopicName>
+        <imageTopicName>/${camera_name}/ir/image_raw</imageTopicName>
+        <cameraInfoTopicName>/${camera_name}/ir/camera_info</cameraInfoTopicName>
         <depthImageTopicName>/${camera_name}/depth/image_raw</depthImageTopicName>
         <depthImageCameraInfoTopicName>/${camera_name}/depth/camera_info</depthImageCameraInfoTopicName>
         <pointCloudTopicName>/${camera_name}/depth/points</pointCloudTopicName>
@@ -190,4 +190,3 @@
 </xacro:macro>
 
 </root>
-
