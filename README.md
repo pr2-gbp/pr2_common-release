@@ -1,3 +1,31 @@
+## pr2_common (kinetic) - 1.12.0-0
+
+The packages in the `pr2_common` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release pr2_common --track kinetic --rosdistro kinetic` on `Fri, 22 Apr 2016 14:28:27 -0000`
+
+These packages were released:
+- `pr2_common`
+- `pr2_dashboard_aggregator`
+- `pr2_description`
+- `pr2_machine`
+- `pr2_msgs`
+
+Version of package(s) in repository `pr2_common`:
+
+- upstream repository: https://github.com/pr2/pr2_common.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.12.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.21`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.5`
+- vcstools version: `0.1.38`
+
+
 ## pr2_common (indigo) - 1.11.14-1
 
 The packages in the `pr2_common` repository were released into the `indigo` distro by running `/usr/bin/bloom-release pr2_common --track indigo --rosdistro indigo` on `Mon, 22 Feb 2016 20:59:02 -0000`
