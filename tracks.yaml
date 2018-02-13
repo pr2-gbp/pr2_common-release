@@ -66,4 +66,4 @@ tracks:
     ros_distro: kinetic
     vcs_type: git
     vcs_uri: https://github.com/pr2/pr2_common.git
-    version: :{ask}
+    version: :{auto}
