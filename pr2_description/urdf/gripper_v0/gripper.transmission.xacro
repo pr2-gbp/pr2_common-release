@@ -2,7 +2,7 @@
 <robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
        xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#slider"
-       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:interface="http://ros.org/wiki/xacro"
        xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:macro name="pr2_gripper_transmission_v0" params="side screw_reduction gear_ratio theta0 phi0 t0 L0 h a b r">
@@ -42,7 +42,7 @@
       <!-- screw joint to capture gripper "dynamics" -->
       <simulated_actuated_joint name="${side}_gripper_motor_screw_joint"
                                 passive_actuated_joint="${side}_gripper_motor_slider_joint"
-                                simulated_reduction="3141.6"   />
+                                simulated_reduction="314.16"   />
     </transmission>
   </xacro:macro>
 
