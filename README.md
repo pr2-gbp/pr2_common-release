@@ -1,3 +1,31 @@
+## pr2_common (indigo) - 1.12.2-0
+
+The packages in the `pr2_common` repository were released into the `indigo` distro by running `/usr/bin/bloom-release pr2_common --track indigo --rosdistro indigo` on `Wed, 09 May 2018 14:39:00 -0000`
+
+These packages were released:
+- `pr2_common`
+- `pr2_dashboard_aggregator`
+- `pr2_description`
+- `pr2_machine`
+- `pr2_msgs`
+
+Version of package(s) in repository `pr2_common`:
+
+- upstream repository: https://github.com/pr2/pr2_common.git
+- release repository: https://github.com/pr2-gbp/pr2_common-release.git
+- rosdistro version: `1.11.14-1`
+- old version: `1.11.14--1`
+- new version: `1.12.2-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.2`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.1`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## pr2_common (lunar) - 1.12.2-0
 
 The packages in the `pr2_common` repository were released into the `lunar` distro by running `/usr/bin/bloom-release pr2_common --rosdistro lunar --track lunar --override-release-repository-url https://github.com/pr2-gbp/pr2_common-release` on `Wed, 18 Apr 2018 06:20:10 -0000`
