@@ -1,9 +1,17 @@
 # http://ros.org/doc/groovy/api/catkin/html/user_guide/supposed.html
 cmake_minimum_required(VERSION 2.8.3)
 project(pr2_description)
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED COMPONENTS convex_decomposition ivcon)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+
+find_program(CONVEX_DECOMPOSITION_CMD convex_decomposition
+  HINTS "${convex_decomposition_DEVEL_PREFIX}/lib/convex_decomposition"
+  "${convex_decomposition_INSTALL_PREFIX}/lib/convex_decomposition")
+
+find_program(IVCON_CMD ivcon
+  HINTS "${ivcon_DEVEL_PREFIX}/lib/ivcon"
+  "${ivcon_INSTALL_PREFIX}/lib/ivcon")
 
 # mesh file generations
 # iterate through all the stl files to:
@@ -32,7 +40,7 @@ foreach(it ${pr2_stl_files})
     #create obj files for convex decomposition from stl files
     add_custom_command(
       OUTPUT ${basepath}/convex/${basename}.obj
-      COMMAND ivcon
+      COMMAND ${IVCON_CMD}
       ARGS ${it} ${basepath}/convex/${basename}.obj
       DEPENDS ${it})
 
@@ -41,7 +49,7 @@ foreach(it ${pr2_stl_files})
     #convex decompose object files
     add_custom_command(
       OUTPUT ${basepath}/convex/${basename}_convex.obj
-      COMMAND convex_decomposition
+      COMMAND ${CONVEX_DECOMPOSITION_CMD}
       ARGS ${basepath}/convex/${basename}.obj -v12 -p10
       DEPENDS ${basepath}/convex/${basename}.obj)
 
@@ -50,7 +58,7 @@ foreach(it ${pr2_stl_files})
     #convert obj files back to stlb, put in directory named convex
     add_custom_command(
       OUTPUT ${basepath}/convex/${basename}_convex.stlb
-      COMMAND ivcon
+      COMMAND ${IVCON_CMD}
       ARGS ${basepath}/convex/${basename}_convex.obj ${basepath}/convex/${basename}_convex.stlb
       DEPENDS ${basepath}/convex/${basename}_convex.obj)
 
@@ -59,7 +67,7 @@ foreach(it ${pr2_stl_files})
     #convert obj files back to stla, put in directory named convex
     add_custom_command(
       OUTPUT ${basepath}/convex/${basename}_convex.stla
-      COMMAND ivcon
+      COMMAND ${IVCON_CMD}
       ARGS ${basepath}/convex/${basename}_convex.obj ${basepath}/convex/${basename}_convex.stla
       DEPENDS ${basepath}/convex/${basename}_convex.obj)
 
@@ -68,13 +76,13 @@ foreach(it ${pr2_stl_files})
     #create iv files
     add_custom_command(
       OUTPUT ${basepath}/iv/${basename}.iv
-      COMMAND ivcon
+      COMMAND ${IVCON_CMD}
       ARGS ${it} ${basepath}/iv/${basename}.iv
       DEPENDS ${it})
 
     add_custom_command(
       OUTPUT ${basepath}/convex/${basename}_convex.iv
-      COMMAND ivcon
+      COMMAND ${IVCON_CMD}
       ARGS ${basepath}/convex/${basename}_convex.obj ${basepath}/convex/${basename}_convex.iv
       DEPENDS ${basepath}/convex/${basename}_convex.obj)
      
@@ -91,8 +99,10 @@ add_custom_target(media_files ALL DEPENDS ${pr2urdf} ${pr2robot_expanded} ${prfr
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(CATKIN_DEPENDS xacro)
 
-catkin_add_gtest(test_urdf test/test_urdf.cpp WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
-target_link_libraries(test_urdf urdfdom_model)
+if(CATKIN_ENABLE_TESTING)
+	catkin_add_gtest(test_urdf test/test_urdf.cpp WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+	target_link_libraries(test_urdf urdfdom_model)
+endif()
 
 foreach(dir meshes gazebo materials robots documents urdf)
    install(DIRECTORY ${dir}/ 
