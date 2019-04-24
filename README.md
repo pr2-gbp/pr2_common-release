@@ -1,3 +1,31 @@
+## pr2_common (melodic) - 1.12.4-1
+
+The packages in the `pr2_common` repository were released into the `melodic` distro by running `/usr/bin/bloom-release pr2_common --rosdistro melodic --track melodic` on `Wed, 24 Apr 2019 13:42:17 -0000`
+
+These packages were released:
+- `pr2_common`
+- `pr2_dashboard_aggregator`
+- `pr2_description`
+- `pr2_machine`
+- `pr2_msgs`
+
+Version of package(s) in repository `pr2_common`:
+
+- upstream repository: https://github.com/pr2/pr2_common.git
+- release repository: https://github.com/pr2-gbp/pr2_common-release.git
+- rosdistro version: `1.12.3-0`
+- old version: `1.12.3-0`
+- new version: `1.12.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.11`
+- rosdep version: `0.15.1`
+- rosdistro version: `0.7.3`
+- vcstools version: `0.1.40`
+
+
 ## pr2_common (melodic) - 1.12.3-0
 
 The packages in the `pr2_common` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -y pr2_common --rosdistro melodic --track melodic` on `Mon, 10 Sep 2018 11:20:53 -0000`
