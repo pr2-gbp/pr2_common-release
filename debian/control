@@ -1,0 +1,13 @@
+Source: ros-lunar-pr2-description
+Section: misc
+Priority: extra
+Maintainer: ROS Orphaned Package Maintainers <ros-orphaned-packages@googlegroups.com>
+Build-Depends: debhelper (>= 9.0.0), libgtest-dev, liburdfdom-dev, ros-lunar-catkin, ros-lunar-convex-decomposition, ros-lunar-ivcon, ros-lunar-rosbash
+Homepage: http://ros.org/wiki/pr2_description
+Standards-Version: 3.9.2
+
+Package: ros-lunar-pr2-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-xacro
+Description: This package contains the description (mechanical, kinematic, visual, etc.) of the PR2 robot.
+ The files in this package are parsed and used by a variety of other components. Most users will not interact directly with this package.
