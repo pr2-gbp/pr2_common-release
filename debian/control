@@ -1,0 +1,12 @@
+Source: ros-noetic-pr2-common
+Section: misc
+Priority: optional
+Maintainer: ROS Orphaned Package Maintainers <ros-orphaned-packages@googlegroups.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: http://ros.org/wiki/pr2_common
+Standards-Version: 3.9.2
+
+Package: ros-noetic-pr2-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-pr2-dashboard-aggregator, ros-noetic-pr2-description, ros-noetic-pr2-machine, ros-noetic-pr2-msgs
+Description: URDF description of the robot kinematics and dynamics, 3D models of robot components, information required for gazebo to simulate the PR2, and messages specific to the PR2 such as detailed information about its power board and fingertip pressure sensors.
