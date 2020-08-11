@@ -1,0 +1,12 @@
+Source: ros-noetic-pr2-dashboard-aggregator
+Section: misc
+Priority: optional
+Maintainer: ROS Orphaned Package Maintainers <ros-orphaned-packages@googlegroups.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: http://ros.org/wiki/pr2_dashboard_aggregator
+Standards-Version: 3.9.2
+
+Package: ros-noetic-pr2-dashboard-aggregator
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-pr2-msgs, ros-noetic-rospy, ros-noetic-std-msgs
+Description: A simple script that aggregates all of the topics that a &quot;pr2_dashboard&quot; app might be interested in.
