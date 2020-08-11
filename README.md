@@ -1,3 +1,31 @@
+## pr2_common (noetic) - 1.13.0-1
+
+The packages in the `pr2_common` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -y pr2_common --track noetic --rosdistro noetic` on `Tue, 11 Aug 2020 03:29:12 -0000`
+
+These packages were released:
+- `pr2_common`
+- `pr2_dashboard_aggregator`
+- `pr2_description`
+- `pr2_machine`
+- `pr2_msgs`
+
+Version of package(s) in repository `pr2_common`:
+
+- upstream repository: https://github.com/pr2/pr2_common.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.13.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.3`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## pr2_common (lunar) - 1.12.4-1
 
 The packages in the `pr2_common` repository were released into the `lunar` distro by running `/usr/bin/bloom-release pr2_common --rosdistro lunar --track lunar` on `Wed, 24 Apr 2019 23:51:17 -0000`
